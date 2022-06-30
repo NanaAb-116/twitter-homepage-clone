@@ -4,13 +4,16 @@
 * {
   margin: 0;
   padding: 0;
+  color: white;
 }
 body {
   background-color: #16202a;
 }
 .sec {
-  justify-content: center;
+  width: 70vw;
+  margin: 1rem auto;
   color: white;
+  position: relative;
 }
 .twitter-logo {
   color: white;
@@ -55,8 +58,10 @@ body {
   font-size: 1.5rem;
 }
 .left-sec {
-  position: static;
+  height: 100vh;
+  /* position: absolute;
   top: 0;
+  left: 13rem; */
 }
 .small-round {
   display: none;
@@ -123,9 +128,8 @@ body {
   border: 1px solid rgba(120, 120, 120, 0.1);
   border-top: 0;
   border-bottom: 0;
-  margin: 0.5rem 1.5rem;
   padding: 0;
-  width: 30vw;
+  width: 35vw;
 }
 .tweet-field {
   border: 0cm;
@@ -175,7 +179,7 @@ body {
 }
 .tweet-profile-more {
   position: absolute;
-  top: 12px;
+  top: 5px;
   right: 16px;
   font-size: large;
 }
@@ -198,7 +202,21 @@ body {
 .tins {
   vertical-align: -4px;
 }
+@media (max-width: 1650px) {
+  .sec {
+    width: 83vw;
+  }
+}
 @media all and (max-width: 1240px) {
+  .sec {
+    width: 90vw;
+  }
+  .main {
+    width: 50vw;
+  }
+  .nav {
+    width: 3rem;
+  }
   .nav-links h4 {
     display: none;
   }
@@ -215,13 +233,22 @@ body {
   }
   .small-round {
     display: block;
+    position: relative;
+    bottom: 30px;
   }
   .footer-profile {
     display: none;
   }
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1020px) {
+  .sec {
+    width: 100vw;
+  }
+  .left-sec {
+    margin-left: 3rem;
+  }
   .main {
+    margin-left: 2rem;
     width: 70vw;
   }
   .trends {
@@ -231,6 +258,20 @@ body {
 @media all and (max-width: 800px) {
   .sec {
     justify-content: start;
+  }
+  .left-sec {
+    margin-left: 1rem;
+  }
+  .main {
+    width: 80vw;
+  }
+}
+@media (max-width: 500px) {
+  .sec {
+    width: 100vw;
+  }
+  .left-sec {
+    margin-left: 0;
   }
   .main {
     width: 70vw;
