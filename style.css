@@ -389,9 +389,10 @@ nav {
   .feed {
     margin: 0 -0.8rem;
   }
+  .tweet-img {
+    max-width: 20rem;
+  }
   nav {
-    margin: 0 -0.8rem;
-
     border-top: 1px solid rgba(120, 120, 120, 0.12);
     border-bottom: 1px solid rgba(120, 120, 120, 0.1);
     display: flex;
