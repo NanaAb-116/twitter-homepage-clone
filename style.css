@@ -1,23 +1,37 @@
-/* input::-webkit-input-placeholder {
-  font-family: 'Material Icons Outlined';
-} */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
   background-color: #16202a;
 }
 .sec {
   width: 70vw;
-  margin: 1rem auto;
+  margin: 1rem auto 0 auto;
   color: white;
   position: relative;
+  display: flex;
+}
+.twitter-logo:hover {
+  background-color: #1f2c39;
 }
 .twitter-logo {
+  cursor: pointer;
   color: white;
   font-size: 2rem;
   margin-left: 1rem;
+  padding: 0.8rem;
+  border-radius: 25px;
 }
 .nav h4 {
   font-weight: 300;
@@ -29,14 +43,21 @@ body {
   font-size: 2rem;
 }
 .nav-links {
+  cursor: pointer;
   list-style: none;
-  padding-top: 1.8rem;
+  padding: 0.9rem;
   margin-left: 1rem;
+  border-radius: 2rem;
+}
+.nav-links:hover {
+  background-color: #1f2c39;
 }
 .nav-links h4 {
   display: inline;
 }
 .tweet-btn {
+  margin-top: 2rem;
+  font-size: 1.3rem;
   border: none;
   background-color: rgb(29, 155, 240);
   color: white;
@@ -45,6 +66,7 @@ body {
   height: 52px;
 }
 .tweet-btn-round {
+  margin-top: 2rem;
   display: none;
   border: none;
   background-color: rgb(29, 155, 240);
@@ -57,10 +79,11 @@ body {
   font-size: 1.5rem;
 }
 .left-sec {
-  height: 100vh;
-  /* position: absolute;
-  top: 0;
-  left: 13rem; */
+  height: 100%;
+  position: sticky;
+  top: 1rem;
+  margin-right: 1.3rem;
+  margin-bottom: 1rem;
 }
 .small-round {
   display: none;
@@ -68,7 +91,7 @@ body {
   bottom: 10px;
 }
 .footer-profile {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
 }
 .footer-profile-more {
@@ -78,15 +101,19 @@ body {
   font-size: xx-large;
 }
 .trends {
-  position: relative;
+  margin-left: 1rem;
+  height: 100%;
+  color: white;
+  position: sticky;
+  top: 1rem;
 }
 .search-twitter {
+  color: white;
   width: 350px;
   height: 53px;
   border-radius: 25px;
   border: 0;
   background-color: #1f2732;
-  padding: 12px;
   padding-left: 3rem;
   outline: none;
 }
@@ -99,6 +126,7 @@ body {
   left: 1.2rem;
 }
 .trends-for-you {
+  margin-top: 1rem;
   width: 350px;
   background-color: #1f2732;
   border-radius: 15px;
@@ -109,10 +137,14 @@ body {
 }
 .trends-for-you h5 {
   font-size: medium;
+  margin: 0;
 }
 .trend-item {
   padding-top: 1rem;
   position: relative;
+}
+.trend-item:hover {
+  background-color: #232d39;
 }
 .trend-item-more {
   position: absolute;
@@ -120,6 +152,7 @@ body {
   right: 6px;
 }
 .trend-show-more {
+  margin-top: 1rem;
   text-decoration: none;
   color: rgb(29, 155, 240);
 }
@@ -136,10 +169,18 @@ nav {
 .home-profile-img {
   display: none;
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.stars {
+  margin-right: 1.5rem;
+}
 .tweet-field {
   border: 0cm;
   width: 80%;
   height: 4rem;
+  color: white;
   background-color: #16202a;
   outline: none;
 }
@@ -148,8 +189,14 @@ nav {
   color: rgb(168, 168, 168);
 }
 .iconsNbtn {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3rem;
   margin-top: 1.5rem;
   border-top: 1px solid rgba(120, 120, 120, 0.1);
+}
+.iconsNbtn span {
+  padding: 0.8rem 0.5rem;
 }
 .tweet-field-icons {
   color: rgba(29, 156, 240, 0.748);
@@ -164,11 +211,22 @@ nav {
   height: 36px;
   margin: 0.7rem;
 }
+.show:hover {
+  background-color: #1a2530;
+}
 .show {
+  text-align: center;
   border-top: 1px solid rgba(120, 120, 120, 0.12);
   border-bottom: 1px solid rgba(120, 120, 120, 0.1);
+  padding: 1rem 0;
+}
+.show a {
+  font-size: 1.1rem;
+  text-decoration: none;
 }
 .show-tweets:hover {
+  color: rgb(29, 156, 240);
+
   text-decoration: none;
 }
 .show-tweets {
@@ -178,17 +236,36 @@ nav {
 .tweet {
   border-bottom: 1px solid rgba(120, 120, 120, 0.1);
 }
-
+.tweet:hover {
+  background-color: #1a2530;
+}
+.tweet-feed-dp {
+  border-radius: 25px;
+  margin-right: 0.5rem;
+}
+.tweet-img {
+  margin: 0.5rem 0;
+  max-height: 30rem;
+  border-radius: 8px;
+}
+.media {
+  display: flex;
+}
 .twt {
+  flex: 1;
   position: relative;
 }
 .at-n-time {
   opacity: 0.7;
 }
+.tweet-profile {
+  margin-top: 1rem;
+  margin-left: 0.7rem;
+}
 .tweet-profile-more {
   position: absolute;
   top: 5px;
-  right: 16px;
+  right: 2px;
   font-size: large;
 }
 .responses {
@@ -217,13 +294,13 @@ nav {
 }
 @media all and (max-width: 1240px) {
   .sec {
-    width: 90vw;
+    width: 95vw;
+  }
+  .left-sec {
+    margin-left: 2rem;
   }
   .main {
     width: 50vw;
-  }
-  .nav {
-    width: 3rem;
   }
   .nav-links h4 {
     display: none;
@@ -234,15 +311,13 @@ nav {
   .tweet-btn-round {
     display: block;
     border: none;
+    margin-right: 0 !important;
     background-color: rgb(29, 155, 240);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
   }
   .small-round {
     display: block;
     position: relative;
-    bottom: 30px;
+    margin-top: 3rem;
   }
   .footer-profile {
     display: none;
@@ -251,13 +326,13 @@ nav {
 @media all and (max-width: 1020px) {
   .sec {
     width: 100vw;
+    margin: 1rem 0;
   }
   .left-sec {
-    margin-left: 3rem;
+    margin-left: 5rem;
   }
   .main {
-    margin-left: 2rem;
-    width: 70vw;
+    width: 65vw;
   }
   .trends {
     display: none;
@@ -268,7 +343,7 @@ nav {
     justify-content: start;
   }
   .left-sec {
-    margin-left: 1rem;
+    margin: 0;
   }
   .main {
     width: 80vw;
@@ -276,6 +351,7 @@ nav {
 }
 @media (max-width: 500px) {
   .sec {
+    margin: 1rem 0.5rem;
     width: 90vw;
   }
   .left-sec {
@@ -299,18 +375,16 @@ nav {
   }
   .show {
     margin: 0 -0.8rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
     border-top: 1px solid rgba(120, 120, 120, 0.12);
     border-bottom: 1px solid rgba(120, 120, 120, 0.1);
   }
   .home-profile-img {
     display: inline;
+    border-radius: 25px;
   }
   .home-text {
     display: inline;
-  }
-  .stars {
-    margin-top: 0;
   }
   .feed {
     margin: 0 -0.8rem;
