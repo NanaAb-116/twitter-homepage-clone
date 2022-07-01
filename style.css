@@ -17,7 +17,7 @@ body {
 }
 .sec {
   width: 70vw;
-  margin: 1rem auto 0 auto;
+  margin: 0 auto;
   color: white;
   position: relative;
   display: flex;
@@ -81,7 +81,7 @@ body {
 .left-sec {
   height: 100%;
   position: sticky;
-  top: 1rem;
+  top: 0;
   margin-right: 1.3rem;
   margin-bottom: 1rem;
 }
@@ -105,7 +105,7 @@ body {
   height: 100%;
   color: white;
   position: sticky;
-  top: 1rem;
+  top: 0;
 }
 .search-twitter {
   color: white;
@@ -172,6 +172,16 @@ nav {
 .header {
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #16202af7;
+  width: 35vw;
+  padding: 1rem 0.5rem;
+}
+form {
+  margin-top: 4rem;
+  padding-left: 0.5rem;
 }
 .stars {
   margin-right: 1.5rem;
@@ -287,6 +297,7 @@ nav {
 .icons {
   vertical-align: -4px;
 }
+
 @media (max-width: 1650px) {
   .sec {
     width: 83vw;
@@ -358,6 +369,7 @@ nav {
     display: none;
   }
   .main {
+    width: 100vw;
     margin: 0;
     width: 90vw;
     border: 0;
@@ -366,12 +378,13 @@ nav {
     display: none;
   }
   .header {
-    background-color: #16202a;
+    background-color: #16202af7;
     position: fixed;
     top: 0;
-    padding: 1rem 0.4rem;
+    padding: 1rem 0.2rem;
     width: 100%;
     z-index: 1;
+    margin-left: -0.4rem;
   }
   .show {
     margin: 0 -0.8rem;
@@ -385,6 +398,9 @@ nav {
   }
   .home-text {
     display: inline;
+    position: absolute;
+    top: 1.5rem;
+    margin-left: 1rem;
   }
   .feed {
     margin: 0 -0.8rem;
