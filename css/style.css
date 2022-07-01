@@ -124,12 +124,18 @@ body {
   text-decoration: none;
   color: rgb(29, 155, 240);
 }
+nav {
+  display: none;
+}
 .main {
   border: 1px solid rgba(120, 120, 120, 0.1);
   border-top: 0;
   border-bottom: 0;
   padding: 0;
   width: 35vw;
+}
+.home-profile-img {
+  display: none;
 }
 .tweet-field {
   border: 0cm;
@@ -199,7 +205,7 @@ body {
   font-size: medium;
   vertical-align: -4px;
 }
-.tins {
+.icons {
   vertical-align: -4px;
 }
 @media (max-width: 1650px) {
@@ -268,12 +274,60 @@ body {
 }
 @media (max-width: 500px) {
   .sec {
-    width: 100vw;
+    width: 90vw;
   }
   .left-sec {
-    margin-left: 0;
+    display: none;
   }
   .main {
-    width: 70vw;
+    margin: 0;
+    width: 90vw;
+    border: 0;
+  }
+  form {
+    display: none;
+  }
+  .header {
+    background-color: #16202a;
+    position: fixed;
+    top: 0;
+    padding: 1rem 0.4rem;
+    width: 100%;
+    z-index: 1;
+  }
+  .show {
+    margin: 0 -0.8rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(120, 120, 120, 0.12);
+    border-bottom: 1px solid rgba(120, 120, 120, 0.1);
+  }
+  .home-profile-img {
+    display: inline;
+  }
+  .home-text {
+    display: inline;
+  }
+  .stars {
+    margin-top: 0;
+  }
+  .feed {
+    margin: 0 -0.8rem;
+  }
+  nav {
+    margin: 0 -0.8rem;
+
+    border-top: 1px solid rgba(120, 120, 120, 0.12);
+    border-bottom: 1px solid rgba(120, 120, 120, 0.1);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #16202a;
+    padding: 0.5rem;
+  }
+  .bottom-icons {
+    background-color: transparent;
+    border: 0;
   }
 }
