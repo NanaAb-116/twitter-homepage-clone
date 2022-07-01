@@ -4,7 +4,6 @@
 * {
   margin: 0;
   padding: 0;
-  color: white;
 }
 body {
   background-color: #16202a;
@@ -169,6 +168,9 @@ nav {
   border-top: 1px solid rgba(120, 120, 120, 0.12);
   border-bottom: 1px solid rgba(120, 120, 120, 0.1);
 }
+.show-tweets:hover {
+  text-decoration: none;
+}
 .show-tweets {
   color: rgb(29, 156, 240);
   margin: 0;
@@ -328,6 +330,9 @@ nav {
   }
   .bottom-icons {
     background-color: transparent;
+    padding-right: 1rem;
+    color: white;
+    font-size: 1.4rem;
     border: 0;
   }
 }
